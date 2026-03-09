@@ -23,11 +23,11 @@ public class ConexionMysql {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             cn = DriverManager.getConnection(URL, USER, PASSWORD);
-            //JOptionPane.showMessageDialog(null, "✅ Conectado correctamente a la base de datos" , "DB", JOptionPane.PLAIN_MESSAGE);
+            //JOptionPane.showMessageDialog(null, "Conectado correctamente a la base de datos" , "DB", JOptionPane.PLAIN_MESSAGE);
         } catch (ClassNotFoundException e) {
-        	JOptionPane.showMessageDialog(null, "❌ No se encontró el driver JDBC: " + e.getMessage(), "DB Error", JOptionPane.ERROR_MESSAGE);
+        	JOptionPane.showMessageDialog(null, "No se encontró el driver JDBC: " + e.getMessage(), "DB Error", JOptionPane.ERROR_MESSAGE);
         } catch (SQLException e) {
-        	JOptionPane.showMessageDialog(null, "❌ Error al conectar con la base de datos: " + e.getMessage(), "DB Error", JOptionPane.ERROR_MESSAGE);
+        	JOptionPane.showMessageDialog(null, "Error al conectar con la base de datos: " + e.getMessage(), "DB Error", JOptionPane.ERROR_MESSAGE);
         }
         return cn;
     }

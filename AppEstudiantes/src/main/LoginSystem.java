@@ -150,13 +150,13 @@ public class LoginSystem extends JFrame {
         closeBtn.setFocusPainted(false);
         closeBtn.addActionListener(e -> System.exit(0));
         container.add(closeBtn);
-
+        
         addDragListener(container);
         
         JLabel lblNewLabel = new JLabel("Myaux v1.0.2B");
         lblNewLabel.setFont(new Font("Segoe UI", Font.BOLD | Font.ITALIC, 12));
         lblNewLabel.setForeground(new Color(255, 255, 255));
-        lblNewLabel.setBounds(377, 498, 93, 12);
+        lblNewLabel.setBounds(377, 485, 93, 25);
         container.add(lblNewLabel);
         
         try {

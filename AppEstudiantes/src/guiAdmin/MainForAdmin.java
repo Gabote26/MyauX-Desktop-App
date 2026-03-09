@@ -21,10 +21,9 @@ public class MainForAdmin extends BaseMainFrame implements Recargable {
 		btnEditar.addActionListener(e -> editarEstudiante());
 		btnEliminar.addActionListener(e -> eliminarEstudiante());
 		btnSendMsg.addActionListener(e -> enviarMensaje());
-		btnCalificaciones.addActionListener(e -> gestionarCalificaciones());
+		btnImportarCSV.addActionListener(e -> new ImportarEstudiantesCSV(this).setVisible(true));
 		
-		btnCalificaciones.setEnabled(false);
-		btnCalificaciones.setVisible(false);
+		actionPanel.remove(btnCalificaciones);
 	}
 
 	// Acciones que solo puede realizar el administrador
@@ -95,18 +94,6 @@ public class MainForAdmin extends BaseMainFrame implements Recargable {
 		} else {
 			JOptionPane.showMessageDialog(this, "Error al obtener ID de usuario");
 		}
-	}
-
-	private void gestionarCalificaciones() {
-		int usuarioId = obtenerIdUsuario(this.nombre);
-		
-		if (usuarioId <= 0) {
-			JOptionPane.showMessageDialog(this, "Error al obtener datos del administrador");
-			return;
-		}
-		
-		// El administrador puede calificar cualquier materia (null = todas)
-		new GestionarCalificacionesDeGrupo(null, usuarioId).setVisible(true);
 	}
 
 	// ------------ Método Auxiliar ----------------

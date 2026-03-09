@@ -28,6 +28,7 @@ public abstract class BaseMainFrame extends JFrame implements Recargable {
     protected boolean darkMode = false;
     private RoundedButton btnSettings;
     protected RoundedButton btnCalificaciones;
+    protected RoundedButton btnImportarCSV;
     
     // Componentes para el tema
     private JPanel headerPanel;
@@ -287,6 +288,8 @@ public abstract class BaseMainFrame extends JFrame implements Recargable {
         btnCalificaciones.setCursor(new Cursor(Cursor.HAND_CURSOR));
         btnCalificaciones.setOpaque(true);
         
+        btnImportarCSV = new RoundedButton("📥 Importar CSV", 20);
+        
         // Estilo de botones
         styleActionButton(btnGestionar, new Color(245, 245, 245), new Color(230, 230, 230));
         styleActionButton(btnRefrescar, new Color(245, 245, 245), new Color(230, 230, 230));
@@ -295,6 +298,7 @@ public abstract class BaseMainFrame extends JFrame implements Recargable {
         styleActionButton(btnEliminar, new Color(245, 245, 245), new Color(230, 230, 230));
         styleActionButton(btnSendMsg, new Color(245, 245, 245), new Color(230, 230, 230));
         styleActionButton(btnCalificaciones, new Color(245, 245, 245), new Color(230, 230, 230));
+        styleActionButton(btnImportarCSV, new Color(245, 245, 245), new Color(230, 230, 230));
         
         actionPanel.add(btnRefrescar);
         actionPanel.add(btnAgregar);
@@ -302,6 +306,7 @@ public abstract class BaseMainFrame extends JFrame implements Recargable {
         actionPanel.add(btnEliminar);
         actionPanel.add(btnSendMsg);
         actionPanel.add(btnCalificaciones);
+        actionPanel.add(btnImportarCSV);
         
         // Adaptacion responsive
         addComponentListener(new ComponentAdapter() {
