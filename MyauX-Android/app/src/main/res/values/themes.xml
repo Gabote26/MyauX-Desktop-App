@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MyauX" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">#1C2446</item>
+        <item name="android:navigationBarColor">#1E1E23</item>
+        <item name="android:windowBackground">#1E1E23</item>
+    </style>
+
+    <style name="Theme.MyauX.Splash" parent="Theme.MyauX">
+        <item name="android:windowBackground">#1E1E23</item>
+    </style>
+</resources>

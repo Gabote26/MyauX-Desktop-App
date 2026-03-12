@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_blue">#1976D2</color>
+    <color name="black">#000000</color>
+    <color name="dark_bg">#1E1E23</color>
+    <color name="dark_card">#2A2E3C</color>
+    <color name="dark_surface">#262F57</color>
+    <color name="purple_dark">#5407A9</color>
+    <color name="purple_primary">#9632FF</color>
+    <color name="white">#FFFFFF</color>
+    <string name="app_name">MyauX</string>
+    <style name="Theme.MyauX" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">#1C2446</item>
+        <item name="android:navigationBarColor">#1E1E23</item>
+        <item name="android:windowBackground">#1E1E23</item>
+    </style>
+    <style name="Theme.MyauX.Splash" parent="Theme.MyauX">
+        <item name="android:windowBackground">#1E1E23</item>
+    </style>
+</resources>
